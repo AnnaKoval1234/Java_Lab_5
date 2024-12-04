@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
@@ -83,32 +85,45 @@ public class Main
         ArrayList<Integer> list = randomList();
         System.out.println("Сгенерированный список: " + list);
         int value = Check.inputInteger("Введите значение, которое надо удалить: ");
-        mc.myRemoveAll(list, value);
-        System.out.println("Список, из которого удалили значение: " + list);
+        System.out.println("Список, из которого удалили значение: " + mc.myRemoveAll(list, value));
     }
     public void Task_4()
     {
         System.out.println(ANSI_CYAN + "Задание 4. Мап" + ANSI_RESET);
-        MyCollection mc = new MyCollection();
-        mc.cheapSourCream("task4.txt");
+        try
+        {
+            File file = new File("task4.txt");
+            Scanner scanner = new Scanner(file);
+            System.out.println(mc.cheapSourCream(scanner));
+            scanner.close();
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("Файл не найден!");
+        }
     }
-
     public void Task_5()
     {
         System.out.println(ANSI_CYAN + "Задание 5. Сет" + ANSI_RESET);
-        MyCollection mc = new MyCollection();
-        System.out.println(mc.printSounds("task5.txt"));
+        try
+        {
+            File file = new File("task5.txt");
+            Scanner scanner = new Scanner(file);
+            System.out.println(mc.VoicedConsonants2(scanner));
+            scanner.close();
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("Файл не найден!");
+        }
     }
-
     public void Task_6()
     {
         System.out.println(ANSI_CYAN + "Задание 6. Очередь" + ANSI_RESET);
-        Deque<Integer> q1 = new ArrayDeque<>();
-        MyCollection mc = new MyCollection();
-        q1.add(1);
-        q1.add(3);
-        q1.add(2);
-        System.out.println(mc.reverseQueue(q1));
+        Deque<Integer> q1 = randomQueue();
+        System.out.println("Сгенерированная очередь: " + q1);
+        Deque<Integer> q2 = mc.reverseQueue(q1);
+        System.out.println("Очередь в обратном порядке: " + q2);
     }
 
     public static void main(String args[])
