@@ -34,7 +34,7 @@ class MyCollection<T>
 
             int fatContent = Integer.parseInt(items[2]);
             int cost = Integer.parseInt(items[3]);
-            if (hm.get(fatContent) < cost)
+            if (hm.get(fatContent) > cost)
             {
                 hm.put(fatContent, cost);
                 if (fatContent == 15) cnt15 = 1;
