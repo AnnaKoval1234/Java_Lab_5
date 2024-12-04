@@ -1,10 +1,9 @@
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Queue;
 import java.util.Scanner;
 
 class MyCollection<T>
@@ -82,11 +81,15 @@ class MyCollection<T>
         Collections.sort(result);
         return result;
     }
-    public Deque<T> reverseQueue(Deque<T> queue)
+    public Queue<T> reverseQueue(Queue<T> queue)
     {
-        Deque<T> result = new ArrayDeque<>();
+        Queue<T> result = new ArrayDeque<>();
+        ArrayList<T> temp = new ArrayList<>();
         for (T elem: queue)
-            result.addFirst(elem);
+            temp.add(elem);
+        temp.reversed();
+        for (T elem: temp)
+            result.add(elem);
         return result;
     }
 }

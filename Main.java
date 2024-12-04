@@ -130,9 +130,9 @@ public class Main
     public static void main(String args[])
     {   
         Main m = new Main();
-        m.Task_1();
+        // m.Task_1();
         // m.Task_2();
-        // m.Task_3();
+        m.Task_3();
         // m.Task_4();
         // m.Task_5();
         // m.Task_6();
