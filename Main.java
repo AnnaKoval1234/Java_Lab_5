@@ -42,6 +42,7 @@ public class Main
     public void Task_1()
     {
         System.out.println(ANSI_CYAN + "Задание 1. Шаблоны" + ANSI_RESET);
+        System.out.println("Надо ввести три дроби.");
         FractionDecorator fd = new FractionDecorator(1, 1);
         for (int i = 0; i < 3; i++)
         {
@@ -129,10 +130,10 @@ public class Main
     public static void main(String args[])
     {   
         Main m = new Main();
-        // m.Task_1();
+        m.Task_1();
         // m.Task_2();
         // m.Task_3();
-        m.Task_4();
+        // m.Task_4();
         // m.Task_5();
         // m.Task_6();
     }

@@ -48,7 +48,7 @@ class MyCollection<T>
                 if (fatContent == 25) cnt25++;
             }
         }
-        return hm.get(15) + " " + hm.get(20) + " " + hm.get(25);
+        return cnt15 + " " + cnt20 + " " + cnt25;
     }
     private boolean isVoicedConsonant(Character sound)
     {
