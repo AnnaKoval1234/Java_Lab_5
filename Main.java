@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Deque;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class Main
@@ -26,9 +26,9 @@ public class Main
         }
         return arr;
     }
-    private Deque<Integer> randomQueue()
+    private Queue<Integer> randomQueue()
     {
-        Deque<Integer> queue = new ArrayDeque<>();
+        Queue<Integer> queue = new ArrayDeque<>();
         int N = (int)(Math.random() * 9 + 1);
         for (int i = 0; i < N; i++)
         {
@@ -121,9 +121,9 @@ public class Main
     public void Task_6()
     {
         System.out.println(ANSI_CYAN + "Задание 6. Очередь" + ANSI_RESET);
-        Deque<Integer> q1 = randomQueue();
+        Queue<Integer> q1 = randomQueue();
         System.out.println("Сгенерированная очередь: " + q1);
-        Deque<Integer> q2 = mc.reverseQueue(q1);
+        Queue<Integer> q2 = mc.reverseQueue(q1);
         System.out.println("Очередь в обратном порядке: " + q2);
     }
 
@@ -132,9 +132,9 @@ public class Main
         Main m = new Main();
         // m.Task_1();
         // m.Task_2();
-        m.Task_3();
+        // m.Task_3();
         // m.Task_4();
         // m.Task_5();
-        // m.Task_6();
+        m.Task_6();
     }
 }

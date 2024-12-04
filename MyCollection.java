@@ -87,9 +87,8 @@ class MyCollection<T>
         ArrayList<T> temp = new ArrayList<>();
         for (T elem: queue)
             temp.add(elem);
-        temp.reversed();
-        for (T elem: temp)
-            result.add(elem);
+        for (int i = temp.size() - 1; i >= 0; i--)
+            result.add(temp.get(i));
         return result;
     }
 }
